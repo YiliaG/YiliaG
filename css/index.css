@@ -1,0 +1,47 @@
+a{
+	color: #d969a4;
+}
+a:hover,
+a:active,
+a:focus{
+	color: #f9066f;
+}
+.mtb30{
+	margin-top: 30px;
+	margin-bottom: 30px
+}
+.wrap{
+	margin: 10px 5px 8px 10px;
+	color: #000;
+	padding: 0 !important;
+	/*background-color: #fbf9fe;*/
+
+	filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid: DXImageTransform.Microsoft.gradient(startcolorstr= #fbf9fe, endcolorstr=blue, gradientType=0);
+	-ms-filter: alpha(opacity=100 finishopacity=50 style=1 startx=0, starty=0, finishx=0, finishy=150) progid: DXImageTransform.Microsoft.gradient(startcolorstr= #fbf9fe, endcolorstr=blue, gradientType=0);
+	/*IE8*/
+	background: #fbf9fe;
+	/* 一些不支持背景渐变的浏览器 */
+	background: -moz-linear-gradient(top, #fbf9fe, rgba(236, 243, 218, 0.5));
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fbf9fe), to(rgba(236, 243, 218, 0.8)));
+	background: -o-linear-gradient(top, #fbf9fe, rgba(236, 243, 218, 0.5));
+}
+.header-tit{
+	text-align: center;
+}
+.page_title{
+	color: #3cc51f;
+}
+.page_desc{
+	color: #888;
+}
+.sub-menu li{
+	padding: 10px;
+	border-bottom: 1px solid #888;
+}
+
+.sub-menu a{
+	display: block;
+	text-decoration: none;
+
+}
+

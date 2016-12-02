@@ -6,7 +6,7 @@ var app = angular.module('myApp', []);
 
 // var app = angular.module('myApp1', []);
 	app.controller('siteCtrl', function($scope, $http) {
-	  $http.get("../json/blog.json")
+	  $http.get("/json/blog.json")
 	  .success(function (response) {$scope.names = response.list;});
 	});
 

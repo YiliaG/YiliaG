@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="keywords" content="Yilia test">
+    <meta name="author" content="Yilia">
+    <title>Angular JS</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js" type="text/javascript"></script>
+    <script src="js/ngapp.js" type="text/javascript"></script>
+</head>
+
+<body ng-app="myapp">
+    <div class="wrap" ng-controller="mycontroller">
+        <label for="name">请输入您的姓名：</label> <input type="text" id="name" ng-model="name" />
+        <p class="text-info">{{ name | uppercase }}</p>
+    </div>
+    <div ng-controller="read-con">
+        <ul>
+            <li ng-repeat="list in lists">
+                {{ list.title }} <br>  {{ list.url }} <br> {{ list.desc }}
+            </li>
+        </ul>
+    </div>
+
+</body>

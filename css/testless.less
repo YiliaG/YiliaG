@@ -1,0 +1,21 @@
+@charset "utf-8";
+@width: 60px;
+.box {
+    width: @width;
+    height: @width;
+  background-color: #fbcb09;
+}
+
+.border_width(@width: 6px) {
+    border: @width solid #fff2f2;
+}
+.box1{
+  width:@width;
+  height:100px;
+	.border_width(8px);
+}
+.box2{
+  width:80px;
+  height:80px;
+  .border_width(20px);
+}

@@ -1,0 +1,51 @@
+@charset "utf-8";
+/*我是会被编译的*/
+
+//我是不会被编译的
+
+//Less中的变量用@开头，例如：@变量名：值；
+@test_width: 300px;
+.box {
+  width: @test_width;
+  height: @test_width;
+  background-color: #1c94c4;
+  .border;
+}
+//混合
+
+.border {
+  border: 5px solid pink;
+}
+.box2 {
+  .box;
+  margin-left: 100px;
+}
+//混合 可带参数
+.border2(@border_width) {
+  border: @border_width solid red;
+}
+.test_mix2 {
+  .border2(30px);
+}
+
+//混合 可带参数  默认带值
+.border3(@border_width:10px) {
+  border: @border_width solid red;
+}
+.test_mix3 {
+  .border2(20px);
+}
+
+//混合的例子
+.border_radius(@radius:5px){
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border: @radius;
+}
+.radius_test{
+  width:100px;
+  height:60px;
+  background-color: #bce8f1;
+  .border_radius();
+}
+

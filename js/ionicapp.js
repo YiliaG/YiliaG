@@ -1,9 +1,76 @@
-angular.module('todo', ['ionic'])
-/**
- * The Projects factory handles saving and loading projects
- * from local storage, and also lets us save and load the
- * last active project index.
- */
+angular.module('ionicApp', ['ionic'])
+
+    .config(function ($stateProvider, $urlRouterProvider) {
+
+        $stateProvider
+            .state('tabs', {
+                url: "/tab",
+                abstract: true,
+                templateUrl: "templates/tabs.html"
+            })
+            .state('tabs.home', {
+                url: "/home",
+                views: {
+                    'home-tab': {
+                        templateUrl: "templates/home.html",
+                        controller: 'HomeTabCtrl'
+                    }
+                }
+            })
+            .state('tabs.facts', {
+                url: "/facts",
+                views: {
+                    'home-tab': {
+                        templateUrl: "templates/facts.html"
+                    }
+                }
+            })
+            .state('tabs.facts2', {
+                url: "/facts2",
+                views: {
+                    'home-tab': {
+                        templateUrl: "templates/facts2.html"
+                    }
+                }
+            })
+            .state('tabs.about', {
+                url: "/about",
+                views: {
+                    'about-tab': {
+                        templateUrl: "templates/about.html"
+                    }
+                }
+            })
+            .state('tabs.navstack', {
+                url: "/navstack",
+                views: {
+                    'about-tab': {
+                        templateUrl: "templates/nav-stack.html"
+                    }
+                }
+            })
+            .state('tabs.contact', {
+                url: "/contact",
+                views: {
+                    'contact-tab': {
+                        templateUrl: "templates/contact.html"
+                    }
+                }
+            })
+            .state('tabs.contact1', {
+                url: "/contact1",
+                views: {
+                    'contact-tab': {
+                        templateUrl: "templates/contact1.html"
+                    }
+                }
+            });
+
+
+        $urlRouterProvider.otherwise("/tab/home");
+
+    })
+
     .factory('Projects', function() {
         return {
             all: function() {
@@ -30,6 +97,10 @@ angular.module('todo', ['ionic'])
                 window.localStorage['lastActiveProject'] = index;
             }
         }
+    })
+
+    .controller('HomeTabCtrl', function ($scope) {
+        console.log('HomeTabCtrl');
     })
 
     .controller('TodoCtrl', function($scope, $timeout, $ionicModal, Projects, $ionicSideMenuDelegate) {
@@ -116,3 +187,4 @@ angular.module('todo', ['ionic'])
         });
 
     });
+
